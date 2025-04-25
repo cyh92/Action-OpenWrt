@@ -31,6 +31,7 @@ on:
      default: 'nokia_ea0326gmp'
      type: choice
      options:
+      - cudy-tr3000
       - glinet_gl-mt300n-v2
       - cmcc_rax3000m
       - nokia_ea0326gmp
