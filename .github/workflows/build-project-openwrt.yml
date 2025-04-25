@@ -31,6 +31,7 @@ on:
      default: 'nokia_ea0326gmp'
      type: choice
      options:
+      - cudy_tr3000
       - cmcc_rax3000m
       - cr6608
       - nokia_ea0326gmp
