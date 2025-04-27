@@ -96,7 +96,8 @@ sed -i "s/OpenWrt /v${TEMP}\/ /g" package/lean/default-settings/files/zzz-defaul
 #find ./ -name luci-theme-argon | xargs rm -rf;
 # 拉取 argon的源码
 #git clone --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon
-
+#在线设备
+git clone --depth=1 https://github.com/danchexiaoyang/luci-app-onliner package/luci-app-onliner
 #网络设置向导
 git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
 #高级设置-Plus
