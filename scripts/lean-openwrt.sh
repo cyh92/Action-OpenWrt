@@ -105,3 +105,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus package/lu
 #家长控制
 git clone --depth=1 https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
 
+#微信推送
+git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
+
+
