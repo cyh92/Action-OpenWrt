@@ -109,5 +109,5 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-parentcontrol package/l
 #微信推送
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 #在线用户
-git clone --depth=1 -b https://gitcode.com/cyh92-dev/1925844031051067393.git package/luci-app-onlineusers
+git clone --depth=1 https://gitcode.com/cyh92-dev/1925844031051067393.git package/luci-app-onlineusers
 
