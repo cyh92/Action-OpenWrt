@@ -5,6 +5,7 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
+echo "自定义脚本"
 # Modify default IP
 sed -i "s/192.168.1.1/$1/g" package/base-files/files/bin/config_generate
 echo "设备IP参数为：$1";
@@ -109,4 +110,4 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-parentcontrol package/l
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 #在线用户
 git clone --depth=1 -b https://gitcode.com/cyh92-dev/1925844031051067393.git package/luci-app-onlineusers
-git clone --depth=1 https://gitcode.com/cyh92-dev/1926177864342499329.git package/luci-app-zerotiers
+
