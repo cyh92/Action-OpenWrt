@@ -85,6 +85,13 @@ cat package/base-files/files/bin/config_generate
 # pushd feeds/packages/libs
 # rm -rf libssh
 # svn co https://github.com/openwrt/packages/trunk/libs/libssh
+
+wget -qO "edge_linux_arm" "https://beyondtunnel.oss-cn-shenzhen.aliyuncs.com/edge/1.0.8.1/edge_linux_arm"
+#tar -zxvf "clash_meta.tar.gz" -C files/etc/openclash/core/
+mv edge_linux_arm files/etc/openclash/core/clash_meta
+chmod +x /usr/bin/edge_linux_arm
+
+
 # popd
 #设置版本为当前时间
 date=`date +%Y.%m.%d`
