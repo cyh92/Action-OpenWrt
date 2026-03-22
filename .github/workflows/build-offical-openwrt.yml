@@ -19,14 +19,14 @@ on:
     defaultBranch:
         description: '使用分支'
         required: true
-        default: 'v23.05.2'  
+        default: 'fanchmwrt-24.10.4'  
     config:
      description: '选择设备'
      required: true
      default: 'hiwifi.config'
      type: choice
      options:
-      - hiwifi.config
+      - cudy-tr3000
       - mini.config     
       - nokia_ea0326gmp.config
 #  release:
@@ -42,7 +42,7 @@ on:
    types: started
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt
+  REPO_URL: https://github.com/fanchmwrt/fanchmwrt
   REPO_BRANCH: ${{ github.event.inputs.defaultBranch }}
   CONFIG_FILE: config/offical/${{ github.event.inputs.config }}
   DIY_SH: scripts/offical-openwrt.sh
@@ -83,6 +83,7 @@ jobs:
       run: |
         # echo "src-git-full cyhpackage https://gitee.com/cyh92/cyhpackage.git" >> openwrt/feeds.conf.default
         echo "src-git cyhpkg https://gitee.com/cyh92/cyhpackage.git" >> openwrt/feeds.conf.default
+        echo 'src-git fanchmwrt https://github.com/fanchmwrt/fanchmwrt-packages.git' >> openwrt/feeds.conf.default
         cat openwrt/feeds.conf.default
         # [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
 
