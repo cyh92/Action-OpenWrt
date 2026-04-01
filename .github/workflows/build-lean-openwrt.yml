@@ -32,7 +32,7 @@ on:
      type: choice
      options:
       - cudy-tr3000
-      - glinet_gl-mt300n-v2
+      - JDCloud_AX1800_Pro
       - cmcc_rax3000m
       - nokia_ea0326gmp
       
