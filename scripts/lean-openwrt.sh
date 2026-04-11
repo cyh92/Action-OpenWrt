@@ -117,6 +117,8 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-parentcontrol package/l
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 #在线用户
 git clone --depth=1 https://gitcode.com/cyh92-dev/1925844031051067393.git package/luci-app-onlineusers
+#科学
+git clone --depth=1https://github.com/Openwrt-Passwall/openwrt-passwall2.git package/luci-app-passwall2
 
 # 智能组网
 git clone --depth=1 https://github.com/OrayOS/OpenOray.git package/OpenOray
