@@ -28,13 +28,13 @@ on:
     config:
      description: '选择设备'
      required: true
-     default: 'nokia_ea0326gmp'
+     default: 'cudy-tr3000'
      type: choice
      options:
       - cudy-tr3000
       - JDCloud_AX1800_Pro
+      - JDCloud_AX6600
       - cmcc_rax3000m
-      - nokia_ea0326gmp
       
 #  release:
 #    types: published
