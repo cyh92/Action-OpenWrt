@@ -28,14 +28,14 @@ on:
     config:
      description: '选择设备'
      required: true
-     default: 'nokia_ea0326gmp'
+     default: 'JDCloud_AX6600'
      type: choice
      options:
+      - JDCloud_AX6600
       - cudy_tr3000
       - cmcc_rax3000m
       - cr6608
       - nokia_ea0326gmp
-      - zero2w
       - r68s           
       - glinet_gl-mt300n-v2    
 #  release:
