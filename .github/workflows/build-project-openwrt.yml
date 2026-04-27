@@ -19,7 +19,7 @@ on:
     defaultBranch:
         description: '使用分支'
         required: true
-        default: 'openwrt-24.10'  
+        default: 'openwrt-25.12'  
     loadApp:
         description: '加载完整插件'
         required: true
