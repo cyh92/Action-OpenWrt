@@ -25,6 +25,8 @@ sed -i '/DISTRIB_REVISION/d' package/base-files/files/etc/openwrt_release
 echo "DISTRIB_REVISION='R22.03'" >> package/base-files/files/etc/openwrt_release
 sed -i '/DISTRIB_DESCRIPTION/d' package/base-files/files/etc/openwrt_release
 echo "DISTRIB_DESCRIPTION='v$date'" >> package/base-files/files/etc/openwrt_release
+#修复~号不符合apk规范
+sed -i 's/~/-/g' package/base-files/Makefile
 
 #rm -r package/emortal/default-settings
 #echo "删除成功"
