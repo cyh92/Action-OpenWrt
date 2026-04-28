@@ -49,7 +49,7 @@ on:
 #    - cron: 0 8 * * 5
   watch:
    types: started
-
+run-name: Build to ${{ github.event.inputs.config }}
 env:
   REPO_URL: http://github.com/immortalwrt/immortalwrt.git
   REPO_BRANCH: ${{ github.event.inputs.defaultBranch }}
