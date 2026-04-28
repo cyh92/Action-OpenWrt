@@ -47,7 +47,7 @@ on:
 #    - cron: 0 8 * * 5
   watch:
    types: started
-  
+run-name: Deploy to ${{ github.event.inputs.config }}
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
