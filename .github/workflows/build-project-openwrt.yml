@@ -124,7 +124,6 @@ jobs:
         echo "CONFIG_PACKAGE_luci-theme-argon=y" >> $OPENWRTROOT/.config        
         echo "CONFIG_PACKAGE_default-settings-chn=y" >> $OPENWRTROOT/.config
         
-        cat $OPENWRTROOT/.config
         chmod +x $DIY_SH
         cd $OPENWRTROOT
         ../$DIY_SH ${{ github.event.inputs.defaultIP }}
@@ -141,7 +140,8 @@ jobs:
     - name: 编译包文件
       id: compile
       run: |
-        cd $OPENWRTROOT
+        cd $OPENWRTROOT        
+        cat $OPENWRTROOT/.config
         echo -e "$(nproc) thread compile"
         make tools/compile -j$(nproc) || make tools/compile -j1 V=s
         make toolchain/compile -j$(nproc) || make toolchain/compile -j1 V=s
