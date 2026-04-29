@@ -106,8 +106,6 @@ sed -i "s/OpenWrt /v${TEMP}\/ /g" package/lean/default-settings/files/zzz-defaul
 #git clone --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon
 #在线设备
 git clone --depth=1 https://github.com/danchexiaoyang/luci-app-onliner package/luci-app-onliner
-#网络设置向导
-git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
 #高级设置-Plus
 git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 #家长控制
@@ -119,7 +117,7 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-a
 git clone --depth=1https://github.com/Openwrt-Passwall/openwrt-passwall2.git package/luci-app-passwall2
 
 #NetWiz(网络设置向导) 
-git clone --depth=1 https://github.com/huchd0/luci-app-netwiz package/luci-app-netwiz
+git clone --depth=1 -b dev https://github.com/cyh92/luci-app-netwiz package/luci-app-netwiz
 
 # 智能组网
 git clone --depth=1 https://github.com/OrayOS/OpenOray.git package/OpenOray
