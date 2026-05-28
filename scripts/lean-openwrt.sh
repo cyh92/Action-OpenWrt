@@ -120,4 +120,7 @@ git clone --depth=1https://github.com/Openwrt-Passwall/openwrt-passwall2.git pac
 git clone --depth=1 -b dev https://github.com/cyh92/luci-app-netwiz package/luci-app-netwiz
 
 # 智能组网
-git clone --depth=1 https://github.com/OrayOS/OpenOray.git package/OpenOray
+git clone --depth=1 https://github.com/OrayOS/OpenOray.git package/OpenOraypp-netwiz
+
+# 局域网设备扫描
+git clone --depth=1 https://github.com/adminchenyu/LAN-Scanner.git
