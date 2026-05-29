@@ -56,6 +56,7 @@ rm -rf package/ctcgfw/r8168
 #git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
 #集客AC控制器
 #git clone https://github.com/Akimio521/luci-app-gecoosac package/luci-app-gecoosac
-
+#删除冲突文件
+rm -rf feeds/luci/modules/luci-mod-dashboard
 #NetWiz(网络设置向导) 
 git clone --depth=1 -b dev https://github.com/cyh92/luci-app-netwiz package/luci-app-netwiz
