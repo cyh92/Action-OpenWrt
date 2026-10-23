@@ -15,13 +15,13 @@ on:
     url:
       description: '请输入仓库地址'
       required: true
-      default: 'https://gitee.com/cyh92/ok-tv.git'  
+      default: 'https://github.com/immortalwrt/immortalwrt.git'  
       type: choice
       options:
-      - https://github.com/fanchmwrt/fanchmwrt.git
+      - https://github.com/immortalwrt/immortalwrt.git
       - 自定义地址
     custom_url:
-      description: '自定义仓库地址（仅当上面选择「自定义地址」时生效）'
+      description: '自定义仓库地址（仅当上面选择「自定义地址」时生效）https://github.com/padavanonly/immortalwrt-mt798x-6.6'
       required: false
       type: string
     defaultIP:
