@@ -49,7 +49,7 @@ on:
       - cr6608
       - nokia_ea0326gmp
       - r68s           
-      - glinet_gl-mt300n-v2    
+      - sl-3000    
 #  release:
 #    types: published
 #  push:
