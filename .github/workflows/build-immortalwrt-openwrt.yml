@@ -6,12 +6,24 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Project OpenWrt
+name: Build immortalwrt OpenWrt
 
 on:
   repository_dispatch:
   workflow_dispatch:
    inputs:  
+    url:
+      description: '请输入仓库地址'
+      required: true
+      default: 'https://gitee.com/cyh92/ok-tv.git'  
+      type: choice
+      options:
+      - https://github.com/fanchmwrt/fanchmwrt.git
+      - 自定义地址
+    custom_url:
+      description: '自定义仓库地址（仅当上面选择「自定义地址」时生效）'
+      required: false
+      type: string
     defaultIP:
         description: '管理地址IP'
         required: true
@@ -51,7 +63,7 @@ on:
    types: started
 run-name: Build to ${{ github.event.inputs.config }}
 env:
-  REPO_URL: https://github.com/fanchmwrt/fanchmwrt.git
+  REPO_URL: ${{ github.event.inputs.url }}
   REPO_BRANCH: ${{ github.event.inputs.defaultBranch }}
   CONFIG_FILE: config/project/${{ github.event.inputs.config }}.config
   DIY_SH: scripts/project-openwrt.sh
@@ -86,7 +98,20 @@ jobs:
     - name: 克隆源代码
       run: |
         df -hT $PWD
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+        selected_url="${{ inputs.url }}"
+        custom_input="${{ inputs.custom_url }}"
+        if [[ "$selected_url" == "自定义地址" ]]; then
+            if [[ -z "$custom_input" ]]; then
+              echo "ERROR: 选择「自定义地址」时，必须在下方填写完整仓库URL！"
+              exit 1
+            fi
+            final_url="$custom_input"
+          else
+            final_url="$selected_url"
+          fi
+          echo "final_url=$final_url" >> $GITHUB_OUTPUT
+          echo "最终使用仓库: $final_url"
+        git clone --depth 1 $final_url -b $REPO_BRANCH openwrt
         #下载固件配置
         git clone --depth 1 https://gitcode.com/cyh92/RouterConfig.git config
         cd config
