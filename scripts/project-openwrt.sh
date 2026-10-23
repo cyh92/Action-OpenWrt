@@ -50,6 +50,8 @@ rm -rf package/ctcgfw/r8168
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 #在线设备
 #git clone --depth=1 https://github.com/danchexiaoyang/luci-app-onliner package/luci-app-onliner
+git clone --depth=1 https://github.com/lemonjc/luci-app-onliner-overview.git package/luci-app-onliner-overview
+
 #高级设置-Plus
 #git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 #家长控制
