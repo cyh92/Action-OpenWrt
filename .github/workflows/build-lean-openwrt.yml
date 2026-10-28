@@ -110,7 +110,18 @@ jobs:
       run: |
         cd $OPENWRTROOT
         ./scripts/feeds install -a
-
+    - name: 修复 perl SDBM_File malloc 冲突
+      run: |
+        cd $OPENWRTROOT
+        # 先确认路径存在，perl 5.28.1 SDBM_File
+        SDBM_PATH="feeds/packages/lang/perl/perl-5.28.1/ext/SDBM_File/sdbm.c"
+        if [ -f "$SDBM_PATH" ]; then
+          echo "Patching $SDBM_PATH"
+          sed -i '38,39s/^extern Malloc_t malloc/\/\/ extern Malloc_t malloc/' "$SDBM_PATH"
+          sed -i '38,39s/^extern Free_t free/\/\/ extern Free_t free/' "$SDBM_PATH"
+        else
+          echo "sdbm.c not found, skip patch"
+        fi
     - name: 加载自定义配置
       run: |
         [ -e files ] && mv files $OPENWRTROOT/files
