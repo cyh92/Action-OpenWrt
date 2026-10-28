@@ -124,3 +124,5 @@ git clone --depth=1 https://github.com/OrayOS/OpenOray.git package/OpenOraypp-ne
 
 # 局域网设备扫描
 git clone --depth=1 https://github.com/adminchenyu/LAN-Scanner.git
+
+git clone --depth=1 https://github.com/xiaren2/luci-app-onliner-overview.git package/luci-app-onliner-overview
